@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "profile about-me tools"
+        "profile about-me tools"
+        "profile work-experience tools";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.tools{
+	grid-area: tools;
+     background: #f8f9fa;
+     padding: 20px;
+}
+
+.experiences{
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    
+}
+.experience h4{
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+   
+}
+
+.profile{
+	 grid-area: profile;
+     background: #f8f9fa;
+     padding: 20px;
+     text-align: center;
+}
+
+.about-me{
+	 grid-area: about-me;
+     background: #f8f9fa;
+     padding: 20px;
+     text-align: center;
+}
+
+.work-experience{
+	 grid-area: work-experience;
+     background: #f8f9fa;
+     padding: 20px;
+     text-align: center;
+}
+
+.tool-visuals{
+   display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+}
+
+.tools {
+    grid-area: tools;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+.profile, .about-me, .work-experience {
+    background: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.tool-visuals {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tool-visuals progress {
+  width: 150px; 
+  margin: 0 0 0 10px;
+  display: block; 
+}
+
+@property --progress-value {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 0;
+}
+
+:root {
+  --progress-bar-color: #cfd8dc;
+  --progress-value-color: #2196f3;
+  --photoshop-color: #00a9ff; 
+  --illustrator-color: #ff9a00; 
+  --xd-color: #ff61f6; 
+}
+
+progress[value] {
+  display: block;
+  position: relative;
+  appearance: none;
+  width: 80%;
+  height: 6px;
+  border: 0;
+  --border-radius: 10px;
+  border-radius: var(--border-radius);
+  counter-reset: progress var(--progress-value);
+  --progress-max-decimal: calc(var(--value, 0) / var(--max, 0));
+  --progress-value-decimal: calc(var(--progress-value, 0) / var(--max, 0));
+  @supports selector(::-moz-progress-bar) {
+    --progress-value-decimal: calc(var(--value, 0) / var(--max, 0));
+  }
+  --progress-value-percent: calc(var(--progress-value-decimal) * 100%);
+ 
+  animation: calc(1s * var(--progress-max-decimal)) linear 0.5s 1 normal both progress;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--progress-bar-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+progress[value]::-webkit-progress-value {
+  width: var(--progress-value-percent) !important;
+  border-radius: var(--border-radius);
+}
+
+
+.progress-photoshop::-webkit-progress-value {
+  background-color: var(--photoshop-color); 
+}
+
+.progress-illustrator::-webkit-progress-value {
+  background-color:var( --illustrator-color); 
+}
+
+.progress-xd::-webkit-progress-value {
+  background-color:var( --xd-color);
+}
+
+@keyframes progress {
+  from {
+    --progress-value: 0;
+  }
+  to {
+    --progress-value: var(--value);
+  }
+}
