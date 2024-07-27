@@ -5,34 +5,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="profile-style.css" />
+  <link rel="stylesheet" href="about-me-style.css" />
+  <link rel="stylesheet" href="switchers-style.css" />
+  <link rel="stylesheet" href="tools-style.css" />
   <title>Browser</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <section class="profile">
-      <h1>Name Surname</h1>
-      <p>Job title</p>
+      <img id="profile-pic" src="img/profile.jpg"/>
+      <h1>Gabrielė Tamaševičiūtė</h1>
+      <p id="job-role">Jonior developer</p>
       <div class="contacts">
         <div class="contact">
-          <img>
-          <p>gmail.1@gmail.com</p>
+          <img src="img/email.png">
+          <p>gt1230112301@gmail.com</p>
         </div>
+  
         <div class="contact">
-          <img>
-          <p>+37060585895</p>
+          <img src="img/phone.png">
+          <p>867270403</p>
         </div>
+       
         <div class="contact">
-          <img>
-          <p>Vilnius</p>
+          <img src="img/location.png">
+          <p>Vilnius, Lithuania</p>
         </div>
       </div>
-      <button> Download Resume</button>
+      <div class="resume-bnts">
+        <button id="download-resume"> Download Resume</button>
+      </div>
+      
     </section>
 
     <section class="about-me">
       <h2>About Me</h2>
-      <p>Mūsų puslapio tikslas yra suteikti jums esminę informaciją apie investavimo pagrindus, įskaitant fundamentalios ir techninės analizės rodiklius, įvairias skaičiuokles bei naujausias naujienas. Nesvarbu, ar esate pradedantysis investuotojas, ar patyręs profesionalas, čia rasite viską, ko jums reikia norint priimti pagrįstus investavimo sprendimus.</p>
+      <p>
+        I am a determined person who learns quickly and has good logical and critical thinking skills. 
+        I want to become a professional in my field. I enjoy creating things and solving problems, and 
+        I am interested in investing and reading.
+      </p>
+      <p>
+        Right now, I am studying Program Systems at Vilnius College part-time while working as a junior programmer. 
+        I work on the front-end of POS systems using XML, XAML, and C# .NET. I also spend my free time learning HTML/CSS, 
+        Bootstrap, JavaScript, jQuery, and other tools for my personal projects.
+      </p>
+      <p>
+        I improve my analytical thinking, programming skills, and problem-solving abilities by working on different projects:
+      </p>
     </section>
 
     <section class="work-experience">
@@ -48,29 +74,60 @@
           <h4>Time</h4>
           <p>Description</p>
         </div>
+        <div class="experience">
+          <h3>Job title</h3>
+          <h4>Time</h4>
+          <p>Description</p>
+        </div>
+        <div class="experience">
+          <h3>Job title</h3>
+          <h4>Time</h4>
+          <p>Description</p>
+        </div>
       </div>
     </section>
 
-     <section class="tools">
-      <div>
-        <p>Adobe Photoshop</p>
-        <div class="tool-visuals">
-          <img src="photoshop.png" style="width:50px"/>
-          <progress class="progress-photoshop" value="80" max="100" style="--value: 100; --max: 100;"></progress>
-        </div>
-        <p>Adobe Illustrator</p>
-        <div class="tool-visuals">
-          <img src="illustrator.png" style="width:50px"/>
-          <progress class="progress-illustrator" value="70" max="100" style="--value: 75; --max: 100;"></progress>
-        </div>
-        <p>Adobe XD</p>
-        <div class="tool-visuals">
-           <img src="xd.png" style="width:50px"/>
-          <progress class="progress-xd" value="60" max="100" style="--value: 65; --max: 100;"></progress>
-        </div>
+    <div class="right-container">
+      <div class="switch">
+      
+        <label class="toggle-button">
+          <input type="checkbox">
+          <span class="knob"></span>
+          <span class="text lt">LT</span> 
+          <span class="text en">EN</span> 
+        </label>
+    
       </div>
-    </section>
-  </div>
+  
+  
+       <section class="tools">
+        
+        <div class="tools-elements">
+          <h2>
+            Tools
+          </h2>
+          <p>Adobe Photoshop</p>
+          <div class="tool-visuals">
+            <img src="img/tools/"/>
+            <progress class="progress-photoshop" value="80" max="100" style="--value: 100; --max: 100;"></progress>
+          </div>
+          <p>Adobe Illustrator</p>
+          <div class="tool-visuals">
+            <img src="img/illustrator.png"/>
+            <progress class="progress-illustrator" value="70" max="100" style="--value: 75; --max: 100;"></progress>
+          </div>
+          <p>Adobe XD</p>
+          <div class="tool-visuals">
+             <img src="img/xd.png"/>
+            <progress class="progress-xd" value="60" max="100" style="--value: 65; --max: 100;"></progress>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    </div>
+
+    
 
        
 

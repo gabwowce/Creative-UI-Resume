@@ -1,0 +1,134 @@
+.tools{
+	grid-area: tools;
+    background: transparent;
+    color: #EEEEEE;
+    padding: 10px;
+    margin: -20px 20px 20px 20px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: flex-start;
+    align-self: flex-start;
+
+
+}
+
+.tools-elements{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    margin: 0 0 0 0px;
+    width: 200px;
+}
+
+.tool-visuals{
+    display: flex;
+     flex-direction: row; 
+     justify-content: flex-start; 
+     align-items: flex-start; 
+ }
+ 
+ 
+ .tools img{
+   width:50px;
+ }
+ 
+ 
+ .tool-visuals {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     align-items: center;
+     margin-bottom: 10px;
+ }
+ 
+ .tool-visuals progress {
+   width: 150px; 
+   margin: 0 0 0 10px;
+   display: block; 
+ }
+ 
+ @property --progress-value {
+   syntax: '<integer>';
+   inherits: true;
+   initial-value: 0;
+ }
+ 
+ :root {
+   --progress-bar-color: #cfd8dc;
+   --progress-value-color: #2196f3;
+   --photoshop-color: #00a9ff; 
+   --illustrator-color: #ff9a00; 
+   --xd-color: #ff61f6; 
+
+
+   --chatgpt-color:#27cd96;
+   --excel-color:#17472a;
+   --autocad-color:#e51050;
+   --axureRP-color:#029bdf;
+   --command-line-color:#080404;
+   --cplusplus-color:#004d99;
+   --figma-color:#ff7043;
+   --html-color:#ff6d00;
+   --css-ccolor:#eeeeee;
+   --css2-ccolor:#57bfed;
+   --python-color:#fcc304;
+   --sql-color: #c16b05;
+   --xml-color:#eb5c64;
+   --xaml-color:#b074c4;
+   --csharp-color:#b074c4;
+ }
+ 
+ progress[value] {
+   display: block;
+   position: relative;
+   appearance: none;
+   width: 80%;
+   height: 6px;
+   border: 0;
+   --border-radius: 10px;
+   border-radius: var(--border-radius);
+   counter-reset: progress var(--progress-value);
+   --progress-max-decimal: calc(var(--value, 0) / var(--max, 0));
+   --progress-value-decimal: calc(var(--progress-value, 0) / var(--max, 0));
+   @supports selector(::-moz-progress-bar) {
+     --progress-value-decimal: calc(var(--value, 0) / var(--max, 0));
+   }
+   --progress-value-percent: calc(var(--progress-value-decimal) * 100%);
+  
+   animation: calc(1s * var(--progress-max-decimal)) linear 0.5s 1 normal both progress;
+ }
+ 
+ progress[value]::-webkit-progress-bar {
+   background-color: var(--progress-bar-color);
+   border-radius: var(--border-radius);
+   overflow: hidden;
+ }
+ 
+ progress[value]::-webkit-progress-value {
+   width: var(--progress-value-percent) !important;
+   border-radius: var(--border-radius);
+ }
+ 
+ 
+ .progress-photoshop::-webkit-progress-value {
+   background-color: var(--photoshop-color); 
+ }
+ 
+ .progress-illustrator::-webkit-progress-value {
+   background-color:var( --illustrator-color); 
+ }
+ 
+ .progress-xd::-webkit-progress-value {
+   background-color:var( --xd-color);
+ }
+ 
+ @keyframes progress {
+   from {
+     --progress-value: 0;
+   }
+   to {
+     --progress-value: var(--value);
+   }
+ }
+ 

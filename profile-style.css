@@ -1,0 +1,99 @@
+.profile{
+    grid-area: profile;
+    background: #2B2929;
+    color: #EEEEEE;
+    padding: 40px;
+    text-align: center;
+    margin: 40px 0 0 0 ;
+
+}
+
+#profile-pic {
+    width: 170px; 
+    height: 170px; 
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+#job-role{
+    margin: -10px 0 0 0 ;
+    font-size: 14px;
+    color: #e4e4e4;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch ;
+    margin: 40px 0 0 20px ;
+    
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-space-between;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid #434343;    
+
+}
+
+.contact:last-child {
+    border-bottom: none; 
+}
+
+.contact img{
+    width: 15px;
+    height: 18px;
+    margin: 0 10px 0 0 ;
+}
+
+.contact p{
+    font-size: 14px;
+}
+
+
+.resume-bnts{
+    margin: 40px 0 0 0 ;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+    
+
+
+
+#download-resume{
+    margin: 0 0 0 15px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #EEEEEE;
+    background-color: #3dc2ec;
+    padding: 10px 30px;
+    border: solid #3dc2ec 0px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 14px;
+    transition : 1029ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#download-resume:hover{
+
+    transition : 1029ms;
+    padding: 10px 45px;
+    transform : translateY(-0px);
+    background-color: #6dddfc;
+    color: #ffffff;
+    border: none;
+}
+
+
+

@@ -1,0 +1,16 @@
+.about-me{
+    grid-area: about-me;
+    background: #2B2929;
+    color: #EEEEEE;
+    padding: 20px;
+    text-align: left;
+    margin: 0 150px 0 0;
+}
+
+
+
+.about-me p{
+    color: #e4e4e4;
+    font-size: 14px;
+    
+}
