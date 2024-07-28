@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column; 
     justify-content: center; 
-    margin: 0 0 0 0px;
+    margin: -40px 0 0 0px;
     width: 200px;
 }
 
@@ -111,17 +111,61 @@
  }
  
  
- .progress-photoshop::-webkit-progress-value {
-   background-color: var(--photoshop-color); 
+
+
+
+ .progress-xml::-webkit-progress-value {
+   background-color: var(--xml-color); 
  }
  
- .progress-illustrator::-webkit-progress-value {
-   background-color:var( --illustrator-color); 
+ .progress-xaml::-webkit-progress-value {
+   background-color:var(--xaml-color); 
  }
  
- .progress-xd::-webkit-progress-value {
-   background-color:var( --xd-color);
+ .progress-css::-webkit-progress-value {
+   background-color:var(--css2-ccolor);
  }
+
+ .progress-html::-webkit-progress-value {
+  background-color: var(--html-color); 
+}
+
+.progress-csharp::-webkit-progress-value {
+  background-color:var(--csharp-color); 
+}
+
+.progress-sql::-webkit-progress-value {
+  background-color:var( --sql-color);
+}
+
+
+.progress-python::-webkit-progress-value {
+  background-color: var(--python-color); 
+}
+
+.progress-Cplusplus::-webkit-progress-value {
+  background-color:var(--cplusplus-color); 
+}
+
+.progress-axureRP::-webkit-progress-value {
+  background-color:var(--axureRP-color);
+}
+
+.progress-figma::-webkit-progress-value {
+  background-color: var(--figma-color); 
+}
+
+.progress-autocad::-webkit-progress-value {
+  background-color:var( --autocad-color); 
+}
+
+.progress-chatgpt::-webkit-progress-value {
+  background-color:var( --chatgpt-color);
+}
+
+
+
+
  
  @keyframes progress {
    from {

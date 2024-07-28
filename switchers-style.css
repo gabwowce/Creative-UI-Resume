@@ -49,10 +49,6 @@
 	justify-content: center;
 }
 
-.toggle-button .knob:hover {
-    transition: 1029ms;
-    background-color: #6dddfc;
-  }
 
 .toggle-button .text {
     position: absolute;
@@ -67,7 +63,6 @@
     pointer-events: none; 
     
 }
-
 
 
 .text.lt {

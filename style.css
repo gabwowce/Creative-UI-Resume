@@ -27,9 +27,14 @@ body {
       "switch"
       "tools";
   grid-template-rows: 1fr 10fr;
-  /* background: #1F1E1E; */
-  background: linear-gradient(to right, #262424 0%, #1A1818 1%);
+  background: #1F1E1E;
+  /* background: linear-gradient(to right, #262424 0%, #1A1818 1%); */
+  
   margin: -10px -10px -10px 0;
+
+  box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.5); /* Šešėlis tik iš kairės pusės */
+
+
  
 }
 
